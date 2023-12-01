@@ -39,10 +39,10 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main>
+      <div className="formContainer">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 >Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -76,7 +76,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -86,7 +86,7 @@ const Signup = () => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div>
                 {error.message}
               </div>
             )}
