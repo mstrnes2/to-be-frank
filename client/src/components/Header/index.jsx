@@ -9,7 +9,7 @@ const Header = () => {
   };
   return (
     <header >
-      <div >
+      <div  >
          <div>
           {Auth.loggedIn() ? (
             <>

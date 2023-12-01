@@ -1,19 +1,17 @@
 // import { useQuery } from '@apollo/client';
-import React from "react";
+import React from 'react';
 
 function Home() {
-  return(
-    <main>
-      <div>
-      <p>To Be Frank</p>
-    {/* <img src="" alt="Weiner dog in a hotdog costume" /> */}
-    </div>
-    </main>
-  )
+	return (
+		<main>
+			<div className='background container'  >
+				<p className='overlay-text'>To Be Frank</p>
+			</div>
+		</main>
+	);
 }
 
 export default Home;
-
 
 // import ThoughtList from '../components/ThoughtList';
 // import ThoughtForm from '../components/ThoughtForm';
