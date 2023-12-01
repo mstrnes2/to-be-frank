@@ -8,12 +8,10 @@ function Home() {
   return (
     <main>
       <div className="background container">
-        <Link to="./Signup" className="login">
-          Sign Up
+        <Link to="" className="login">
+          Sign Up/Login
         </Link>
-        <Link to="./Login" className="login">
-          Login
-        </Link>
+      
         <p className="overlay-text">To Be Frank</p>
       </div>
     </main>
