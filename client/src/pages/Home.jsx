@@ -1,14 +1,23 @@
 // import { useQuery } from '@apollo/client';
-import React from 'react';
+import React from "react";
+import Login from "./Login";
+import Signup from "./Signup";
+import { Link } from "react-router-dom";
 
 function Home() {
-	return (
-		<main>
-			<div className='background container'  >
-				<p className='overlay-text'>To Be Frank</p>
-			</div>
-		</main>
-	);
+  return (
+    <main>
+      <div className="background container">
+        <Link to="./Signup" className="login">
+          Sign Up
+        </Link>
+        <Link to="./Login" className="login">
+          Login
+        </Link>
+        <p className="overlay-text">To Be Frank</p>
+      </div>
+    </main>
+  );
 }
 
 export default Home;
