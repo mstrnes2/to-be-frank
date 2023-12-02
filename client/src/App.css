@@ -16,8 +16,12 @@ body {
 }
 
 .overlay-text {
-  margin-top: 5%;
   position: absolute;
+  top: 0;
+  left: 0;
+  /* margin: 5%; */
+  margin-left: 25px;
+  margin-top: 20px;
   color: white;
   font-size: 4rem;
 }
@@ -46,12 +50,16 @@ body {
   margin: 5px;
 
 }
-.btn {
+
 
 .login {
   display: block;
   margin-left: auto;
+
+  padding: 30px;
+
   padding: 20px;
+
   text-decoration: none;
   font-size:x-large;
   color: aliceblue;
