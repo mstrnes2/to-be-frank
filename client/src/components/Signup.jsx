@@ -40,9 +40,9 @@ const Signup = () => {
 
   return (
     <main>
-      <div className="formContainer">
+      <div>
         <div className="card">
-          <h4 >Sign Up</h4>
+          
           <div className="card-body">
             {data ? (
               <p>
@@ -50,7 +50,9 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form className='form' onSubmit={handleFormSubmit}>
+              <h4>Sign Up</h4>
+
                 <input
                   className="form-input"
                   placeholder="Your username"
