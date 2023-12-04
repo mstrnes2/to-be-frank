@@ -1,21 +1,21 @@
 body {
 	background-color: rgb(69, 115, 99);
 	margin: 0;
-  padding: 0;
+	padding: 0;
 	overflow: hidden;
 	position: relative;
 	height: 100%;
 }
 
 html {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+	height: 100%;
 }
-
 
 .background {
 	background-image: url(/WeinerDog.jpg);
@@ -46,8 +46,8 @@ html, body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-  height: 100vh;
-	position: absolute;
+	height: 100vh;
+	/* position: absolute; */
 	width: 100%;
   
 }
@@ -56,15 +56,19 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 5%;
-	text-align: center;
+  text-align: center;
 	font-size: 2rem;
 	flex-wrap: wrap;
-  opacity: 100%;  
- }
+	opacity: 100%;
+  padding-top: 10%;
+}
 
 .card {
 	margin: 40px;
+}
+
+.card h4 {
+  font-weight: bold;
 }
 
 .form {
@@ -73,11 +77,19 @@ html, body {
 	justify-content: space-around;
 	align-items: center;
 	border: 2px black solid;
-	min-height: 200px;
+	min-height: 250px;
 	min-width: 300px;
 	border-radius: 10px;
 	padding: 10px;
-  opacity: 100%;
+	opacity: 100%;
+  background-color: #74381C;
+}
+
+.form h4 {
+  font-size: 2rem;
+  margin: 4px;
+  font-weight: 900;
+  color: white;
 }
 
 .form-input {
@@ -88,8 +100,8 @@ html, body {
 }
 
 .btn {
-  border-radius: 5px;
-  min-height: 30px;
+	border-radius: 5px;
+	min-height: 30px;
 }
 
 .login {
@@ -109,22 +121,24 @@ html, body {
 	.formContainer {
 		flex-direction: column;
 		align-items: flex-start;
-    justify-content: center;
+		justify-content: center;
 		min-height: auto;
 		margin: 0;
-    font-size: 1.5rem;
-    margin-left: 12%;
-    
+		font-size: 1.5rem;
+		padding-left: 12%;
+		padding-top: 0px;
+		padding-bottom: 7%;
 	}
+
 	.login-background {
 		position: relative;
-    height: 800px;     
-		}
+		height: 800px;
+	}
 
-    .form {
-      min-width: 150px;
-      min-height: 150px;
-      justify-content: center;
-      align-items: center;
-    }
+	.form {
+		min-width: 150px;
+		min-height: 150px;
+		justify-content: center;
+		align-items: center;
+	}
 }
