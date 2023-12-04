@@ -42,8 +42,8 @@ const Login = (props) => {
   };
 
   return (
-    <main>
-      <div className='formContainer' >
+    <main >
+      <div  >
         <div className="card">
           <h4>Login</h4>
           <div className="card-body">
@@ -53,7 +53,7 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form className='form' onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"

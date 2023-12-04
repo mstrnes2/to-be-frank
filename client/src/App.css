@@ -1,67 +1,130 @@
 body {
-  background-color: rgb(69, 115, 99);
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-  height: 100%;
-  font-family: 'Abril Fatface', serif;
+	background-color: rgb(69, 115, 99);
+	margin: 0;
+  padding: 0;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+
 .background {
-  background-image: url(/WeinerDog.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+	background-image: url(/WeinerDog.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
 }
 
 .overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* margin: 5%; */
-  margin-left: 25px;
-  margin-top: 20px;
-  color: white;
-  font-size: 4rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* margin: 5%; */
+	margin-left: 25px;
+	margin-top: 20px;
+	color: white;
+	font-size: 4rem;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
+.login-background {
+	background-image: url(/hotdogs.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+  height: 100vh;
+	position: absolute;
+	width: 100%;
   
 }
 
+.formContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 5%;
+	text-align: center;
+	font-size: 2rem;
+	flex-wrap: wrap;
+  opacity: 100%;  
+ }
+
 .card {
-  display: flex;
-  flex-direction: column;
-  margin: 10px
+	margin: 40px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border: 2px black solid;
+	min-height: 200px;
+	min-width: 300px;
+	border-radius: 10px;
+	padding: 10px;
+  opacity: 100%;
 }
 
 .form-input {
-  margin: 5px;
-
+	margin: 5px;
+	width: 80%;
+	height: 30px;
+	border-radius: 5px;
 }
 
+.btn {
+  border-radius: 5px;
+  min-height: 30px;
+}
 
 .login {
-  display: block;
-  margin-left: auto;
+	display: block;
+	margin-left: auto;
 
-  padding: 30px;
+	padding: 30px;
 
-  padding: 20px;
+	padding: 20px;
 
-  text-decoration: none;
-  font-size:x-large;
-  color: aliceblue;
- 
+	text-decoration: none;
+	font-size: x-large;
+	color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+	.formContainer {
+		flex-direction: column;
+		align-items: flex-start;
+    justify-content: center;
+		min-height: auto;
+		margin: 0;
+    font-size: 1.5rem;
+    margin-left: 12%;
+    
+	}
+	.login-background {
+		position: relative;
+    height: 800px;     
+		}
+
+    .form {
+      min-width: 150px;
+      min-height: 150px;
+      justify-content: center;
+      align-items: center;
+    }
 }

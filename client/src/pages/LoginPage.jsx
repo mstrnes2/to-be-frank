@@ -5,15 +5,17 @@ import Signup from '../components/Signup';
 
 const LoginPage = () => {
 	return (
-		<div className='formContainer'>
-            <div className='loginForm'>
-			<Signup />
-            </div>
-            
-            <div>
-			<Login />
-            </div>
-		</div>
+		<main >
+			<div className='formContainer login-background'>
+				<div className='loginForm'>
+					<Signup />
+				</div>
+
+				<div className='loginForm'>
+					<Login />
+				</div>
+			</div>
+		</main>
 	);
 };
 
