@@ -23,7 +23,7 @@ const userSchema = new Schema({
     quizResults: {
       restaurant: {
         type: String,
-        required: true,
+        default: '',
       },
       date: {
         type: Date,
