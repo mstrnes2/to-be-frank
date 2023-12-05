@@ -1,11 +1,10 @@
 const typeDefs = `
-  type QuizResults {
-    restaurant: String!
-    date: String!
+  type ProfileQuizResults {
+    restaurant: String
   }
 
   type Profile {
-    quizResults: QuizResults!
+    quizResults: ProfileQuizResults
   }
 
   type User {
