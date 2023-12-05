@@ -1,6 +1,4 @@
-const { gql } = require('apollo-server');
-
-const typeDefs = gql`
+const typeDefs = `
   type QuizResults {
     restaurant: String!
     date: String!
@@ -18,14 +16,20 @@ const typeDefs = gql`
     profile: Profile!
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
-    getUserById(userId: ID!): User
-    # Add other queries as needed
+    users: [User]
+    user(username: String!): User
+    me: User
   }
 
   type Mutation {
-    createUser(username: String!, email: String!, password: String!): User
-    # Add other mutations as needed
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
 
