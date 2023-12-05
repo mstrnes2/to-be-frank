@@ -3,7 +3,8 @@
 }
 
 body {
-	background-color: rgb(69, 115, 99);
+	
+	background-color: #721a18;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -44,6 +45,45 @@ body {
 	display: flex;
 	justify-content: center;
 }
+
+.login {
+	display: block;
+	margin-left: auto;
+	padding: 30px;
+	padding: 20px;
+	text-decoration: none;
+	font-size: x-large;
+	color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+	.background {
+		position: relative;
+		height: 340px;
+		
+	}
+	.login {
+		margin-right: 27%;	
+		margin-top: 100px;
+	
+		
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 100px;
+		
+	}
+	.overlay-text {
+		
+		position: absolute;
+		padding-left: 100px;
+		
+	}
+}
+
+
 
 .login-background {
 	background-image: url(/hotdogs.jpg);
@@ -110,18 +150,7 @@ body {
   background-color: var(--tan)
 }
 
-.login {
-	display: block;
-	margin-left: auto;
 
-	padding: 30px;
-
-	padding: 20px;
-
-	text-decoration: none;
-	font-size: x-large;
-	color: aliceblue;
-}
 
 @media screen and (max-width: 768px) {
 	.formContainer {
