@@ -1,5 +1,5 @@
 :root {
- --tan: #ECAD71;
+ --tan: #e67c20;
 }
 
 body {
@@ -87,7 +87,7 @@ body {
 
 
 .login-background {
-	background-image: url(/hotdogs.jpg);
+	background-image: url(/istockphoto-996519874-1024x1024.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
