@@ -30,9 +30,12 @@ const Login = (props) => {
       });
 
       Auth.login(data.login.token);
+
     } catch (e) {
       console.error(e);
     }
+
+
 
     // clear form values
     setFormState({
@@ -48,8 +51,7 @@ const Login = (props) => {
                     <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                {window.location.assign('/quiz')}
               </p>
             ) : (
               <form className='form' onSubmit={handleFormSubmit}>

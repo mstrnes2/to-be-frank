@@ -47,7 +47,7 @@ const Signup = () => {
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="/quiz">to the quiz page!</Link>
               </p>
             ) : (
               <form className='form' onSubmit={handleFormSubmit}>
