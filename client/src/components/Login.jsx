@@ -51,7 +51,7 @@ const Login = (props) => {
                     <div className="card-body">
             {data ? (
               <p>
-                {window.location.assign('/quiz')}
+                {window.location.assign('/QuizPage')}
               </p>
             ) : (
               <form className='form' onSubmit={handleFormSubmit}>
