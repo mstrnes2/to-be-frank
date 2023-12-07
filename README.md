@@ -1,1 +1,7 @@
-# to-be-frank
+# To Be Frank
+
+https://www.sonicdrivein.com/
+https://cookout.com/
+https://www.costco.com/
+https://www.krystal.com/menu/
+https://www.fiveguys.com/
