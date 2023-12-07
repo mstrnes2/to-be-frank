@@ -3,9 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
 import App from './App.jsx';
-import Home from './pages/Home';
+import Home from './pages/HomePage';
 import QuizPage from './pages/QuizPage.jsx'
-import Profile from './pages/Profile';
+import Profile from './pages/ProfilePage';
 import ErrorPage from './pages/ErrorPage';
 import LoginPage from './pages/loginPage';
 
