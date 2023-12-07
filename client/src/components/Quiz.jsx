@@ -7,26 +7,22 @@ const QuizComponent = () => {
 
   const questions = [
     {
-        question: 'Do you even like hotdogs?',
-        options: ['Yes', 'No'],
+      question: 'Do you even like hotdogs?',
+      options: ['Yes', 'No'],
     },
     {
-        question: 'How many programming languages do you know?',
-        options: ['1-2', '3-5', '6-10', 'More than 10'],
+      question: 'Do you want a corn dog or a hotdog?',
+      options: ['Corn dog', 'Hotdog'],
     },
     {
-        question: 'What is the capital of France?',
-        options: ['Paris', 'Berlin', 'Madrid', 'Rome'],
+      question: 'What toppings do you prefer?',
+      options: ['Chili/Cheese', 'Standard Condiments', 'Mexican', 'Plain'],
     },
     {
-        question: 'Do you prefer tea or coffee?',
-        options: ['Tea', 'Coffee', 'Both', 'Neither'],
+      question: 'What size dog are you looking for?',
+      options: ['Small', 'Medium', 'Large'],
     },
-    {
-        question: 'What is your favorite programming framework?',
-        options: ['React', 'Angular', 'Vue', 'Other'],
-    },
-];
+  ];
 
   const handleAnswerChange = (answer) => {
     setAnswers((prevAnswers) => {
