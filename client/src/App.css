@@ -1,5 +1,5 @@
 :root {
- --tan: #f5cdab;
+ --tan: #f2dbc8;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
 	overflow: hidden;
 	position: relative;
 	height: 100%;
+	font-family: 'Abril Fatface', serif;
 }
 
 html {
@@ -53,7 +54,8 @@ body {
 	padding: 20px;
 	text-decoration: none;
 	font-size: x-large;
-	color: aliceblue;
+	color: white;
+	font-family: 'Abril Fatface', serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -148,7 +150,8 @@ body {
 .btn {
 	border-radius: 5px;
 	min-height: 30px;
-  background-color: var(--tan)
+  background-color: var(--tan);
+  font-family: 'Abril Fatface', serif;
 }
 
 
