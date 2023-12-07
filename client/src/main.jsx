@@ -1,12 +1,12 @@
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from './App.jsx';
-import Home from './pages/Home';
-// import Quiz from './pages/Quiz.jsx';
-import Profile from './pages/Profile';
-import ErrorPage from './pages/ErrorPage';
-import LoginPage from './pages/loginPage';
+import App from "./App.jsx";
+import Home from "./pages/Home";
+import QuizPage from "./pages/QuizPage.jsx";
+import Profile from "./pages/Profile";
+import ErrorPage from "./pages/ErrorPage";
+import LoginPage from "./pages/loginPage";
 
 const router = createBrowserRouter([
   {
@@ -16,29 +16,31 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
-      }, {
-        path: '/LoginPage',
-        element: <LoginPage />
-      }, 
+        element: <Home />,
+      },
+      {
+        path: "/LoginPage",
+        element: <LoginPage />,
+      },
       // {
       //   path: '/signup',
       //   element: <Signup />
-      // }, 
+      // },
       {
-        path: '/profiles/:username',
-        element: <Profile />
-      }, 
-      
-      // {
-      //   path: '/quiz',
-      //   element: <Quiz />
-      // }
-            
-    ]
+        path: "/profiles/:username",
+        element: <Profile />,
+      },
+
+      {
+        path: "/QuizPage",
+        element: <QuizPage />,
+      },
+    ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+//manually define routes for pages
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-)
+);
