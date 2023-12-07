@@ -1,5 +1,5 @@
 :root {
- --tan: #e67c20;
+ --tan: #f5cdab;
 }
 
 body {
@@ -87,7 +87,7 @@ body {
 
 
 .login-background {
-	background-image: url(/istockphoto-996519874-1024x1024.jpg);
+	background-image: url(/iStock-996519874.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
