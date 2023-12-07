@@ -27,7 +27,7 @@ const resolvers = {
         if (context.user) {
           return await User.findOne({ _id: context.user._id });
         }
-        throw new AuthenticationError("User not authenticated");
+        throw AuthenticationError;
       } catch (error) {
         console.error(error);
         throw new Error("Failed to fetch user");
@@ -66,13 +66,14 @@ const resolvers = {
         const user = await User.findOne({ email });
 
         if (!user) {
-          throw new AuthenticationError("User not found");
+          throw AuthenticationError;
         }
 
         const correctPw = await user.isCorrectPassword(password);
 
         if (!correctPw) {
-          throw new AuthenticationError("Incorrect password");
+          throw AuthenticationError;
+
         }
 
         const token = signToken(user);
@@ -83,7 +84,15 @@ const resolvers = {
         throw new Error("Login failed");
       }
     },
-  },
+
+    deleteUser: async (parent, {id}, context) => {
+      if (context.user) {
+        const user = await User.findOneAndDelete({ _id: id });
+        return user;
+      }
+      throw AuthenticationError;
+    }
+  }
 };
 
 module.exports = resolvers;
