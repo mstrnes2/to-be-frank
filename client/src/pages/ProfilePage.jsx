@@ -32,25 +32,25 @@ const Profile = () => {
     );
   }
 
-  return (
-    <div>
-      <h1>
-        {user.username}
-      </h1>
-      <div>
-        <h2>
-          {user.profile.date}
-        </h2>
-        <figure id="">
-          <a href={user.profile.quizResults.link}>
-            <img
-              src={user.profile.quizResults.img}
-              alt={user.profile.quizResults.alt}
-            /></a>
-        </figure>
-      </div>
-    </div>
-  );
+  // return (
+  //   <div>
+  //     <h1>
+  //       {user.username}
+  //     </h1>
+  //     <div>
+  //       <h2>
+  //         {user.profile.date}
+  //       </h2>
+  //       <figure id="">
+  //         <a href={user.profile.quizResults.link}>
+  //           <img
+  //             src={user.profile.quizResults.img}
+  //             alt={user.profile.quizResults.alt}
+  //           /></a>
+  //       </figure>
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default Profile;
