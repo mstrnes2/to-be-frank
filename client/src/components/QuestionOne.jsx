@@ -1,12 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function QuestionOne(){
+
+    const navigate = useNavigate();
+
+    const handleYesClick = () => {
+        navigate('/QuizPage')
+    }
 
     return (
         <div className="containerOne">
         <h1>Do you even like hodogs?</h1>
         <div>
-        <button className="btns">Yes</button>
+        <button className="btns" onClick={handleYesClick} >Yes</button>
         <button className="btns">No</button>
         </div>
         </div>

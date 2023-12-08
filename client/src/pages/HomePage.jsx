@@ -11,7 +11,7 @@ function Home() {
 
   useEffect(() => {
     if (data) {
-      navigate("/QuizPage");
+      navigate("/questionOne");
     }
   }, [data]);
   //Above, dependencies array: critical part of reactive programming (paradigm).
