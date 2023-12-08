@@ -30,15 +30,24 @@ body {
 	height: 100vh;
 }
 
-.overlay-text {
+/* .overlay-text {
 	position: absolute;
 	top: 0;
 	left: 0;
 	/* margin: 5%; */
-	margin-left: 25px;
+	/* margin-left: 25px;
 	margin-top: 20px;
 	color: white;
 	font-size: 4rem;
+} */ 
+
+.logo {
+
+	width: 350px;
+	height: 150px;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-left: 20px;
 }
 
 .container {
@@ -51,9 +60,11 @@ body {
 	margin-left: auto;
 	padding: 30px;
 	padding: 20px;
+	margin-top: 30px;
+	margin-right: 20px;
 	text-decoration: none;
 	font-size: x-large;
-	color: white;
+	color: #e2be89;
 	font-family: 'Abril Fatface', serif;
 }
 

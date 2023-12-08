@@ -19,11 +19,12 @@ function Home() {
   return (
     <main>
       <div className="background container">
+      <img src="/TBF-Dawg-1.png" alt="logo" className="logo" />
         <Link to="/LoginPage" className="login">
           Sign Up/Login
         </Link>
-
-        <p className="overlay-text">To Be Frank</p>
+        
+        {/* <p className="overlay-text">To Be Frank</p> */}
       </div>
     </main>
   );
