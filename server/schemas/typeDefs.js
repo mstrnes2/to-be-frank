@@ -1,6 +1,8 @@
 const typeDefs = `
   type ProfileQuizResults {
     restaurant: String
+    date: String
+    restrauntImage: String
   }
 
   type Profile {

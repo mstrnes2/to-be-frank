@@ -46,8 +46,7 @@ const Signup = () => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/quiz">to the quiz page!</Link>
+               {window.location.assign('/QuizPage')}
               </p>
             ) : (
               <form className='form' onSubmit={handleFormSubmit}>
