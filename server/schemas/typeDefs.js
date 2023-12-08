@@ -1,7 +1,7 @@
 const typeDefs = `
   type ProfileQuizResults {
     restaurant: String
-    date: Date
+    date: String
     restrauntImage: String
   }
 
