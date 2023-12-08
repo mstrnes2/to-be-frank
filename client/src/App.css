@@ -1,9 +1,8 @@
 :root {
- --tan: #f2dbc8;
+	--tan: #f2dbc8;
 }
 
 body {
-	
 	background-color: #721a18;
 	margin: 0;
 	padding: 0;
@@ -63,30 +62,22 @@ body {
 		/* position: relative; */
 		background-size: cover;
 		height: 325px;
-		
 	}
 	.login {
-		margin-right: 27%;	
+		margin-right: 27%;
 		margin-top: 100px;
-	
-		
 	}
 	.container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		margin-top: 100px;
-		
 	}
 	.overlay-text {
-		
 		position: absolute;
 		padding-left: 100px;
-		
 	}
 }
-
-
 
 .login-background {
 	background-image: url(/iStock-996519874.jpg);
@@ -108,6 +99,31 @@ body {
 	opacity: 100%;
 	padding-top: 10%;
 }
+
+.containerOne {
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.containerOne div {
+	display: flex;
+	flex-direction: row;
+}
+
+.btns {
+	border-radius: 5px;
+	min-height: 30px;
+	min-width: 50px;
+	background-color: var(--tan);
+	
+	/* font-family: 'Abril Fatface', serif; */
+	margin: 20px;
+}
+
 
 .card {
 	margin: 40px;
@@ -144,17 +160,15 @@ body {
 	width: 80%;
 	height: 30px;
 	border-radius: 5px;
-  background-color: var(--tan);
+	background-color: var(--tan);
 }
 
 .btn {
 	border-radius: 5px;
 	min-height: 30px;
-  background-color: var(--tan);
-  font-family: 'Abril Fatface', serif;
+	background-color: var(--tan);
+	font-family: 'Abril Fatface', serif;
 }
-
-
 
 @media screen and (max-width: 768px) {
 	.formContainer {

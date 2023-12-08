@@ -4,7 +4,7 @@ import QuizComponent from '../components/Quiz';
 import Header from '../components/Header';
 
 
-const QuizPage = () => {
+function QuizPage() {
 
   return (
     <div>
