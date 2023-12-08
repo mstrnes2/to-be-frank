@@ -1,9 +1,11 @@
 // QuizComponent.js
 import React, { useState } from 'react';
+import { chooseRestaurants } from '../utils/quiz-utils';
 
 const QuizComponent = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [answers, setAnswers] = useState(Array(3).fill('')); 
+	const [quizResults, setQuizResults] = useState(null); 
 
 	const questions = [
 		{
@@ -33,8 +35,22 @@ const QuizComponent = () => {
 	};
 
 	const handleSubmit = () => {
-		console.log(answers); // Handle submission logic here
-	};
+        // Create an object with the answers from the state
+        const userAnswers = [
+			{ dogType: answers[0] }, // Assuming answers[0] is the dogType
+			{ topping: answers[1] }, // Assuming answers[1] is the topping
+			{ size: answers[2] }    // Assuming answers[2] is the size
+		];
+		
+
+        // Call chooseRestaurants function with userAnswers as the argument
+        const results = chooseRestaurants(userAnswers);
+
+        // Log or handle the results as needed
+		setQuizResults(results);
+        console.log(results);
+    };
+
 
 	return (
 		<div className='formContainer'>
