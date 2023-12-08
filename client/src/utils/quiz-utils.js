@@ -28,7 +28,7 @@
 
 export function chooseRestaurants(answers) {
   // TODO: Find all the restaurants that include `answers.dogType` in their `dogTypes` array
-  console.log(answers.dogType);
+  // console.log(answers.dogType);
 
   const results = [];
 
