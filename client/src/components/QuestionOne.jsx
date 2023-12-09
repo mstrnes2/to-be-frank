@@ -1,28 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Auth from "../utils/auth";
 
-export default function QuestionOne(){
+export default function QuestionOne() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const handleYesClick = () => {
+    navigate("/QuizPage");
+  };
 
-    const handleYesClick = () => {
-        navigate('/QuizPage')
-    }
+  const handleNoClick = () => {
+    Auth.removeUserData();
+    console.log("User data yeeted because they don't like hotdogs");
+  };
 
-    return (
-        <div className="containerOne">
-        <h1>Do you even like hodogs?</h1>
-        <div>
-        <button className="btns" onClick={handleYesClick} >Yes</button>
+  return (
+    <div className="containerOne">
+      <h1>Do you even like hodogs?</h1>
+      <div>
+        <button className="btns" onClick={handleYesClick}>
+          Yes
+        </button>
         <button className="btns">No</button>
-        </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
-
-
-
-
 
 // import React, { useState } from 'react';
 
@@ -30,7 +33,7 @@ export default function QuestionOne(){
 //     const [answer, setAnswer] = useState('');
 //     const question = {
 //         title: 'Do you even like hotdogs?',
-//         options: ['Yes', 'No'], 
+//         options: ['Yes', 'No'],
 //     };
 
 //     const handleAnswerChange = (answer) => {
