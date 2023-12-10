@@ -6,14 +6,14 @@ import { QUERY_ME } from "../utils/queries";
 function Home() {
   // TODO: If the user is logged in...
   // ...navigate away.
-  const { loading, data } = useQuery(QUERY_ME);
-  const navigate = useNavigate();
+  // const { loading, data } = useQuery(QUERY_ME);
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    if (data) {
-      navigate("/questionOne");
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     navigate("/questionOne");
+  //   }
+  // }, [data]);
   //Above, dependencies array: critical part of reactive programming (paradigm).
 
   return (

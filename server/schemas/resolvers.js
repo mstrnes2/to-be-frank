@@ -91,8 +91,27 @@ const resolvers = {
         return user;
       }
       throw AuthenticationError;
-    }
-  }
+    },
+
+    updateQuizResults: async (parent, { id, quizResults }) => {
+      try {
+        const user = await User.findById(id);
+
+        if (!user) {
+          throw new Error("User not found");
+        }
+
+        user.profile.quizResults = quizResults;
+
+        await user.save();
+
+        return user;
+      } catch (error) {
+        console.error(error);
+        throw new Error("Failed to update the quiz results");
+      }
+    },
+  },
 };
 
 module.exports = resolvers;

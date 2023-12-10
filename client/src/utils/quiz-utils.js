@@ -28,20 +28,25 @@
 
 export function chooseRestaurants(answers) {
   // TODO: Find all the restaurants that include `answers.dogType` in their `dogTypes` array
-  // console.log(answers.dogType);
+  console.log(answers.dogType);
+  console.log(answers.topping);
+  console.log(answers.size);
 
   const results = [];
 
   for (let i = 0; i < restaurants.length; i++) {
+    console.log("Size:", answers.size, "Restaurant Sizes:", restaurants[i].sizes);
     if (
       restaurants[i].dogTypes.includes(answers.dogType) &&
       restaurants[i].sizes.includes(answers.size) &&
       restaurants[i].toppings.includes(answers.topping)
     ) {
       results.push(restaurants[i]);
+      console.log('Match found!');
+    } else {
+      console.log('No matches for this restaurant!');
     }
   }
-
   return results;
 }
 
@@ -51,36 +56,36 @@ const restaurants = [
   {
     name: "Costco",
     image: "",
-    dogTypes: ["hotdog"],
-    toppings: ["standard condiments", "plain"],
-    sizes: ["large"],
+    dogTypes: ["Hotdog"],
+    toppings: ["Standard Condiments", "Plain"],
+    sizes: ["Large"],
   },
   {
     name: "Sonic",
     image: "",
-    dogTypes: ["hotdog", "corndog"],
-    toppings: ["chilli/cheese"],
-    sizes: ["large"],
+    dogTypes: ["Hotdog", "Corndog"],
+    toppings: ["Chilli/Cheese"],
+    sizes: ["Large"],
   },
   {
     name: "Five Guys",
     image: "",
-    dogTypes: ["hotdog"],
-    toppings: ["standard", "plain"],
-    sizes: ["medium"],
+    dogTypes: ["Hotdog"],
+    toppings: ["Standard", "Plain"],
+    sizes: ["Medium"],
   },
   {
     name: "Krystal",
     image: "",
-    dogTypes: ["hotdog", "corndog"],
-    toppings: ["chilli/cheese", "plain"],
-    sizes: ["small"],
+    dogTypes: ["Hotdog", "Corndog"],
+    toppings: ["Chilli/Cheese", "Plain"],
+    sizes: ["Small"],
   },
   {
     name: "Cookout",
     image: "",
-    dogTypes: ["hotdog", "corndog"],
-    toppings: ["chilli/cheese", "standard", "plain", "mexican"],
-    sizes: ["medium"],
+    dogTypes: ["Hotdog", "Corndog"],
+    toppings: ["Chilli/cheese", "Standard", "Plain", "Mexican"],
+    sizes: ["Medium"],
   },
 ];

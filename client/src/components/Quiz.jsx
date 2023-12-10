@@ -36,13 +36,12 @@ const QuizComponent = () => {
 
 	const handleSubmit = () => {
         // Create an object with the answers from the state
-        const userAnswers = [
-			{ dogType: answers[0] }, // Assuming answers[0] is the dogType
-			{ topping: answers[1] }, // Assuming answers[1] is the topping
-			{ size: answers[2] }    // Assuming answers[2] is the size
-		];
+        const userAnswers = {
+			dogType: answers[0], // Assuming answers[0] is the dogType
+			topping: answers[1], // Assuming answers[1] is the topping
+			size: answers[2]   // Assuming answers[2] is the size
+		};
 		
-
         // Call chooseRestaurants function with userAnswers as the argument
         const results = chooseRestaurants(userAnswers);
 
