@@ -48,15 +48,16 @@ const Login = (props) => {
     <main >
       <div  >
         <div className="card">
-                    <div className="card-body">
+          <div className="card-body">
             {data ? (
               <p>
                 {window.location.assign('/questionOne')}
               </p>
             ) : (
               <form className='form' onSubmit={handleFormSubmit}>
-              <h4>Login</h4>
-
+                <div className='login-h4'>
+                  <h4>Login</h4>
+                </div>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -87,7 +88,7 @@ const Login = (props) => {
               <div >
                 {error.message}
               </div>
-            )} 
+            )}
           </div>
         </div>
       </div>

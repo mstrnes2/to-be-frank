@@ -16,7 +16,7 @@ export default function QuestionOne() {
 
   return (
     <div className="containerOne">
-      <h1>Do you even like hodogs?</h1>
+      Do you even like hodogs?
       <div>
         <button className="btns" onClick={handleYesClick}>
           Yes

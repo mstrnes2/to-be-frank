@@ -84,7 +84,7 @@ const QuizComponent = () => {
 				</div>
 			) : (
 				<div>
-					<h2>Quiz Completed</h2>
+					<h3>Quiz Completed</h3>
 					<button onClick={handleSubmit}>Submit Answers</button>
 				</div>
 			)}
