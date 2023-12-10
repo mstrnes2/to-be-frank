@@ -21,7 +21,7 @@ function Home() {
       <div className="background container">
       <img src="/TBF-Dawg-1.png" alt="logo" className="logo" />
         <Link to="/LoginPage" className="login">
-          Sign Up/Login
+          Sign Up / Login
         </Link>
         
         {/* <p className="overlay-text">To Be Frank</p> */}

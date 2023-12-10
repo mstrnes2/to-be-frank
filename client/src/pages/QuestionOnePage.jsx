@@ -4,10 +4,14 @@ import Header from '../components/Header';
 
 function QuestionOnePage() {
 	return (
-		<div>
+		<div className='questionOne-container'>
+			<div className='questionOne-header'>
 			<Header />
+			</div>
             <br />
+			<div className='questionOne'>
 			<QuestionOne />
+			</div>
 		</div>
 	);
 }

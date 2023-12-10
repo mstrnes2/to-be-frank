@@ -8,12 +8,14 @@ const LoginPage = () => {
 	return (
 		<main >
 			<div className='formContainer login-background'>
-				<div className='loginForm'>
-					<Signup />
-				</div>
-
-				<div className='loginForm'>
-					<Login />
+				<div className='signup-login-container'>
+					<div className='signupForm-container'>
+						<Signup />
+					</div>
+					
+					<div className='loginForm-container'>
+						<Login />
+					</div>
 				</div>
 			</div>
 		</main>

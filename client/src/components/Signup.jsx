@@ -42,15 +42,17 @@ const Signup = () => {
     <main>
       <div>
         <div className="card">
-          
+
           <div className="card-body">
             {data ? (
               <p>
-               {window.location.assign('/QuizPage')}
+                {window.location.assign('/QuizPage')}
               </p>
             ) : (
               <form className='form' onSubmit={handleFormSubmit}>
-              <h4>Sign Up</h4>
+                <div className='signup-h4'>
+                  <h4>Sign Up</h4>
+                </div>
 
                 <input
                   className="form-input"
