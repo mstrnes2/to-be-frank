@@ -32,6 +32,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     deleteUser(id: ID!): User
+    updateQuizResults(id: ID!, restaurant: String, date: String, restaurantImage: String): User
   }
 `;
 
