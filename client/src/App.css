@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
@@ -12,9 +12,8 @@
 	--buttons-text-color: #C57B27;
 	--buttons-background-color: #e7ebee;
 	/* --previous-font: 'Abril Fatface', serif; */
-	--form-font: 'Lobster', sans-serif;
-	--questions-font: 'Bangers';
-	--most-used-font: 'Gelasio', serif;
+	--default-font: 'Gelasio', serif;
+	--most-used-font: 'Bangers';
 }
 
 body {
@@ -68,7 +67,7 @@ body {
 	text-decoration: none;
 	font-size: 36px;
 	color: #e2be89;
-	font-family: var(--form-font);
+	font-family: var(--default-font);
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -88,6 +87,7 @@ body {
 .yes-button,
 .no-button,
 .yes-no-buttons,
+.username-logout-buttons,
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .selectionandnext,
@@ -105,7 +105,7 @@ body {
 	border-radius: 50% 20% / 10% 40%;
 	padding: 10px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-	font-family: var(--form-font);
+	font-family: var(--most-used-font);
 }
 
 .signupForm-container {
@@ -153,11 +153,12 @@ body {
 .form-input::placeholder {
 	font-size: 15px;
 	color: var(--buttons-text-color);
-	font-family: var(--most-used-font);
+	font-family: var(--default-font);
 }
 
 .signup-button,
 .login-button {
+	font-size: 24px !important;
 	margin-top: 15px;
 }
 
@@ -176,10 +177,18 @@ body {
 	border: 0;
 	color: var(--buttons-text-color);
 	background: var(--buttons-background-color);
+	font-family: var(--most-used-font);
 	line-height: 1.15;
-	font-size: 16px;
 	max-width: 50%;
 	white-space: nowrap;
+}
+
+.yes-button,
+.no-button,
+.next-button,
+.submitanswers-button {
+	color: var(--buttons-text-color);
+	background: linear-gradient(45deg, var(--ketchup), #df9400, #e5a933, #ecbf66, #f2d499, #f9eacc);
 }
 
 .yes-button,
@@ -188,13 +197,20 @@ body {
 	font-size: 24px;
 }
 
+.next-button {
+	margin-left: 10px;
+	height: 55px;
+	width: 150px;
+}
+
 .submitanswers-button {
-	margin-top: -35px;
+	margin-top: -50px;
+	font-size: 28px;
 }
 
 .signup-errormessage,
 .login-errormessage {
-	font-family: var(--most-used-font);
+	font-family: var(--default-font);
 	font-size: 20px;
 	margin-top: 25px;
 }
@@ -219,12 +235,13 @@ body {
 .username-button {
 	margin-right: 10px;
 	text-decoration: none;
-	color: var(--default-color);
-	font-family: var(--most-used-font);
-	font-size: 24px;
+	color: var(--mustard);
+	font-family: var(--default-font);
+	font-size: 28px;
 }
 
 .logout-button {
+	font-size: 18px;
 	margin-left: 10px;
 }
 
@@ -245,9 +262,11 @@ body {
 
 .questionOne,
 .quizComponent {
-	font-family: var(--questions-font);
+	font-family: var(--most-used-font);
 	font-size: 80px;
-	color: var(--default-color);
+	background: linear-gradient(45deg, #df9400, #e5a933, #ecbf66, #f2d499, #f9eacc, var(--ketchup), var(--ketchup), var(--ketchup));
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .questionOne {
@@ -262,7 +281,8 @@ body {
 	margin-top: -25px;
 }
 
-.selection {
+.selection,
+.options {
 	margin-right: 10px;
 	/* width: 150px; */
 	border: 0;
@@ -275,20 +295,7 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	color: var(--buttons-text-color);
-	background: var(--buttons-background-color);
-}
-
-.options {
-	color: var(--buttons-text-color);
-	background: var(--buttons-background-color);
-}
-
-.next-button {
-	margin-left: 10px;
-	height: 55px;
-	width: 150px;
-	color: var(--buttons-text-color);
-	background: var(--buttons-background-color);
+	background: linear-gradient(45deg, var(--ketchup), #df9400, #e5a933, #ecbf66, #f2d499, #f9eacc);
 }
 
 .quiz-completed {
@@ -296,6 +303,7 @@ body {
 }
 
 .see-this-message {
+	font-family: var(--default-font);
 	font-size: 36px;
 	color: var(--default-color);
 }
@@ -309,5 +317,4 @@ body {
 		justify-content: center;
 		align-items: center;
 	}
-
 }
