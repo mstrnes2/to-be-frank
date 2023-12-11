@@ -87,7 +87,7 @@ body {
 .yes-button,
 .no-button,
 .yes-no-buttons,
-.username-logout-buttons,
+/* .username-logout-buttons, */
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .selectionandnext,
@@ -183,6 +183,7 @@ body {
 	white-space: nowrap;
 }
 
+
 .yes-button,
 .no-button,
 .next-button,
@@ -232,12 +233,13 @@ body {
 }
 
 .username-logout-buttons {
-	position: fixed;
-	top: 0;
-	right: 0;
-	padding: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
+	position: absolute;
+	top: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 	
+	/* margin-left: 17%; */
+	
 }
 
 .username-button {
@@ -251,6 +253,9 @@ body {
 .logout-button {
 	font-size: 18px;
 	margin-left: 10px;
+	background-color: #cc2522;
+	text-align: center;
+	
 }
 
 .yes-button {
@@ -269,9 +274,10 @@ body {
 }
 
 .questionOne,
-.quizComponent {
+.quizComponent,
+.quiz-completed {
 	font-family: var(--most-used-font);
-	font-size: 80px;
+	font-size: 4rem;
 	background: linear-gradient(
 		45deg,
 		#df9400,
@@ -291,7 +297,7 @@ body {
 	margin-top: -100px;
 }
 
-.quizComponent {
+.quizComponent  {
 	margin-top: -150px;
 	max-width: 50%;
 	font-size: 4rem;
@@ -328,6 +334,8 @@ body {
 
 .quiz-completed {
 	flex-direction: column;
+	font-size: 4rem;
+	
 }
 
 .see-this-message {
@@ -347,8 +355,16 @@ body {
 	}
 
 	.questionOne,
-	.quizComponent {
-		font-size: 50px;
+	.quizComponent,
+	.quiz-completed {
+		font-size: 2.5rem;
+		max-width: 80%;
+	}
+
+	.yes-button, .no-button {
+		width: 50px;
+		height: 50px;
+		margin: 0 15px; 
 	}
 
 	.signup-login-container {
@@ -369,16 +385,28 @@ body {
 		line-height: 20px;
 		padding: 7px 8px;
 	}
-	.quizContainer {
-		margin-top: 70%;
+
+	.username-logout-buttons {
+		margin-left: 5%;
+	}
+	.quizComponent, .quiz-completed {
+		padding-top: 100px;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;	
-		/* max-width: 70%; */
+		align-items: flex-start;
 		
+		
+		/* max-width: 70%; */
+	}
+
+	.selection,
+	.options {
+		max-height: 40px;
+		max-width: 200px;
 	}
 
 	.submitanswers-button {
 		margin-top: 0.1%;
+		margin-left: 25%;
 	}
 }
