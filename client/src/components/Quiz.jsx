@@ -39,7 +39,7 @@ const QuizComponent = () => {
 		const userAnswers = {
 			dogType: answers[0], // Assuming answers[0] is the dogType
 			topping: answers[1], // Assuming answers[1] is the topping
-			size: answers[2]   // Assuming answers[2] is the size
+			size: answers[2], // Assuming answers[2] is the size
 		};
 
 		// Call chooseRestaurants function with userAnswers as the argument
@@ -49,7 +49,6 @@ const QuizComponent = () => {
 		setQuizResults(results);
 		console.log(results);
 	};
-
 
 	return (
 		<div className='quizContainer'>
@@ -61,7 +60,10 @@ const QuizComponent = () => {
 						<select
 							className='selection'
 							value={answers[currentQuestion]}
-							onChange={(e) => handleAnswerChange(e.target.value)}>
+							onChange={(e) => {
+								handleAnswerChange(e.target.value);
+								handleNextQuestion();
+							}}>
 							<option
 								value=''
 								disabled>
@@ -71,23 +73,28 @@ const QuizComponent = () => {
 								(option, optionIndex) => (
 									<option
 										key={optionIndex}
-										value={option} className='options'>
+										value={option}
+										className='options'>
 										{option}
 									</option>
 								)
 							)}
 						</select>
-						<button
+						{/* <button
 							className='next-button'
 							onClick={handleNextQuestion}>
 							Next
-						</button>
+						</button> */}
 					</div>
 				</div>
 			) : (
 				<div className='quiz-completed'>
 					<h3>Quiz Completed</h3>
-					<button className="submitanswers-button" onClick={handleSubmit}>Submit Answers</button>
+					<button
+						className='submitanswers-button'
+						onClick={handleSubmit}>
+						Submit
+					</button>
 				</div>
 			)}
 		</div>
