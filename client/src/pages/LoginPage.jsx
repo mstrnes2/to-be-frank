@@ -7,7 +7,7 @@ const LoginPage = () => {
 
 	return (
 		<main >
-			<div className='formContainer login-background'>
+			<div className='login-background'>
 				<div className='signup-login-container'>
 					<div className='signupForm-container'>
 						<Signup />

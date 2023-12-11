@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 function QuestionOnePage() {
 	return (
-		<div className='questionOne-container'>
+		<div className='questionOneAndHeader'>
 			<div className='questionOne-header'>
 			<Header />
 			</div>

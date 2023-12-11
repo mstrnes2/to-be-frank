@@ -15,13 +15,13 @@ export default function QuestionOne() {
   };
 
   return (
-    <div className="containerOne">
-      Do you even like hodogs?
-      <div>
-        <button className="btns" onClick={handleYesClick}>
+    <div className="questionOneAndButtons">
+      Do you even like hotdogs?
+      <div className="yes-no-buttons">
+        <button className="yes-button" onClick={handleYesClick}>
           Yes
         </button>
-        <button className="btns">No</button>
+        <button className="no-button">No</button>
       </div>
     </div>
   );

@@ -11,14 +11,14 @@ const Header = () => {
 
   return (
     <header >
-      <div  >
-         <div>
+      <div >
+         <div className='username-logout-buttons'>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/profiles/:username">
+              <Link className="username-button" to="/profiles/:username">
                 {Auth.getProfile().data.username}
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button className="logout-button" onClick={logout}>
                 Logout
               </button>
             </>

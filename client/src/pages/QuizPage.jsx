@@ -7,7 +7,7 @@ import Header from '../components/Header';
 function QuizPage() {
 
   return (
-    <div className='quizContainer'>
+    <div className='quizHeaderAndQuestions'>
       <div className='quizHeader'>
         <Header />
       </div>
