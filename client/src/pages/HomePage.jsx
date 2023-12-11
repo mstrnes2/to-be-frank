@@ -18,9 +18,9 @@ function Home() {
 
   return (
     <main>
-      <div className="background container">
+      <div className="background-container">
       <img src="/TBF-Dawg-1.png" alt="logo" className="logo" />
-        <Link to="/LoginPage" className="login">
+        <Link to="/LoginPage" className="signuploginheader">
           Sign Up / Login
         </Link>
         

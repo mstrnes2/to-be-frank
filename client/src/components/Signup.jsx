@@ -79,17 +79,17 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn"
+                  className="signup-button"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Submit
+                  Sign up
                 </button>
               </form>
             )}
 
             {error && (
-              <div>
+              <div className='signup-errormessage'>
                 {error.message}
               </div>
             )}
