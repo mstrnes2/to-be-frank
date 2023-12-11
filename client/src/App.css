@@ -6,10 +6,10 @@
 
 :root {
 	/* --tan: #f2dbc8; */
-	--ketchup: #CC2522;
-	--mustard: #E8AE02;
-	--default-color: #FFFFFF;
-	--buttons-text-color: #C57B27;
+	--ketchup: #cc2522;
+	--mustard: #e8ae02;
+	--default-color: #ffffff;
+	--buttons-text-color: #c57b27;
 	--buttons-background-color: #e7ebee;
 	/* --previous-font: 'Abril Fatface', serif; */
 	--default-font: 'Gelasio', serif;
@@ -65,7 +65,7 @@ body {
 	margin-top: 20px;
 	margin-right: 20px;
 	text-decoration: none;
-	font-size: 36px;
+	font-size: 25px;
 	color: #e2be89;
 	font-family: var(--default-font);
 	position: fixed;
@@ -87,7 +87,7 @@ body {
 .yes-button,
 .no-button,
 .yes-no-buttons,
-.username-logout-buttons,
+/* .username-logout-buttons, */
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .selectionandnext,
@@ -183,12 +183,21 @@ body {
 	white-space: nowrap;
 }
 
+
 .yes-button,
 .no-button,
 .next-button,
 .submitanswers-button {
 	color: var(--buttons-text-color);
-	background: linear-gradient(45deg, var(--ketchup), #df9400, #e5a933, #ecbf66, #f2d499, #f9eacc);
+	background: linear-gradient(
+		45deg,
+		var(--ketchup),
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
 }
 
 .yes-button,
@@ -196,12 +205,12 @@ body {
 .next-button {
 	font-size: 24px;
 }
-
+/* 
 .next-button {
 	margin-left: 10px;
 	height: 55px;
 	width: 150px;
-}
+} */
 
 .submitanswers-button {
 	margin-top: -50px;
@@ -224,12 +233,13 @@ body {
 }
 
 .username-logout-buttons {
-	position: fixed;
-	top: 0;
-	right: 0;
-	padding: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
+	position: absolute;
+	top: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 	
+	/* margin-left: 17%; */
+	
 }
 
 .username-button {
@@ -243,6 +253,9 @@ body {
 .logout-button {
 	font-size: 18px;
 	margin-left: 10px;
+	background-color: #cc2522;
+	text-align: center;
+	
 }
 
 .yes-button {
@@ -261,10 +274,21 @@ body {
 }
 
 .questionOne,
-.quizComponent {
+.quizComponent,
+.quiz-completed {
 	font-family: var(--most-used-font);
-	font-size: 80px;
-	background: linear-gradient(45deg, #df9400, #e5a933, #ecbf66, #f2d499, #f9eacc, var(--ketchup), var(--ketchup), var(--ketchup));
+	font-size: 4rem;
+	background: linear-gradient(
+		45deg,
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc,
+		var(--ketchup),
+		var(--ketchup),
+		var(--ketchup)
+	);
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -273,8 +297,10 @@ body {
 	margin-top: -100px;
 }
 
-.quizComponent {
+.quizComponent  {
 	margin-top: -150px;
+	max-width: 50%;
+	font-size: 4rem;
 }
 
 .selectionandnext {
@@ -295,11 +321,21 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	color: var(--buttons-text-color);
-	background: linear-gradient(45deg, var(--ketchup), #df9400, #e5a933, #ecbf66, #f2d499, #f9eacc);
+	background: linear-gradient(
+		45deg,
+		var(--ketchup),
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
 }
 
 .quiz-completed {
 	flex-direction: column;
+	font-size: 4rem;
+	
 }
 
 .see-this-message {
@@ -308,13 +344,69 @@ body {
 	color: var(--default-color);
 }
 
-@media screen and (max-width: 768px) and (min-width: 375px) {
-
-	.questionOneAndButtons,
-	.quizContainer {
+@media screen and (max-width: 768px) {
+	.questionOneAndButtons {
+		margin-top: 75px;
+		margin-left: 15px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.questionOne,
+	.quizComponent,
+	.quiz-completed {
+		font-size: 2.5rem;
+		max-width: 80%;
+	}
+
+	.yes-button, .no-button {
+		width: 50px;
+		height: 50px;
+		margin: 0 15px; 
+	}
+
+	.signup-login-container {
+		flex-direction: column; /* Stack containers vertically */
+		align-items: center; /* Center containers horizontally */
+	}
+
+	.signupForm-container,
+	.loginForm-container {
+		margin: 10px 0; /* Add some space between the stacked containers */
+		max-width: fit-content;
+		max-height: fit-content;
+	}
+
+	.form-input {
+		font-size: 14px;
+		height: 30px;
+		line-height: 20px;
+		padding: 7px 8px;
+	}
+
+	.username-logout-buttons {
+		margin-left: 5%;
+	}
+	.quizComponent, .quiz-completed {
+		padding-top: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		
+		
+		/* max-width: 70%; */
+	}
+
+	.selection,
+	.options {
+		max-height: 40px;
+		max-width: 200px;
+	}
+
+	.submitanswers-button {
+		margin-top: 0.1%;
+		margin-left: 25%;
 	}
 }
