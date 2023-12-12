@@ -254,11 +254,11 @@ body {
 	font-family: var(--default-font);
 	font-size: 28px;
 	background: linear-gradient(45deg,
-	#df9400,
-	#e5a933,
-	#ecbf66,
-	#f2d499,
-	#f9eacc);
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -267,17 +267,11 @@ body {
 	font-size: 18px;
 	margin-left: 10px;
 	background: linear-gradient(45deg,
-			var(--ketchup),
-			var(--ketchup),
-			var(--ketchup),
 			#df9400,
 			#e5a933,
 			#ecbf66,
 			#f2d499,
-			#f9eacc,
-			var(--ketchup),
-			var(--ketchup),
-			var(--ketchup));
+			#f9eacc);
 }
 
 .yes-button {
@@ -462,7 +456,4 @@ body {
 		flex-direction: column;
 	}
 
-	.signuploginheader {
-		margin-top: 175px;
-	}
 }
