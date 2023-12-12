@@ -26,6 +26,7 @@ export const ADD_USER = gql`
             restaurant
             date
             restaurantImage
+            link
           }
         }
       }
@@ -45,6 +46,7 @@ export const DELETE_USER = gql`
           restaurant
           date
           restaurantImage
+          link
         }
       }
     }
@@ -55,10 +57,12 @@ export const UPDATE_QUIZ_RESULTS = gql`
   mutation updateQuizResults(
     $restaurant: String
     $restaurantImage: String
+    $date: String
   ) {
     updateQuizResults(
       restaurant: $restaurant
       restaurantImage: $restaurantImage
+      date: $date
     ) {
       _id
       username
@@ -69,6 +73,7 @@ export const UPDATE_QUIZ_RESULTS = gql`
           restaurant
           date
           restaurantImage
+          link
         }
       }
     }

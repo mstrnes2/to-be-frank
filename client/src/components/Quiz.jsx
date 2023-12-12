@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { chooseRestaurants } from '../utils/quiz-utils';
 import { UPDATE_QUIZ_RESULTS } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
+import formatDate from '../utils/dateFormat';
+
+
 
 const QuizComponent = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -50,9 +53,16 @@ const QuizComponent = () => {
 		console.log(results);
 		console.log(results[0].name, results[0].image);
 		try {
-		// Log or handle the results as needed
+		// Log or handle the results as needed.
+			const currentDate = new Date();
+			const dateString = currentDate.toISOString();
 			const { data } = await updateQuizResults({
-				variables: {restaurant: results[0].name, restaurantImage: results[0].image}
+				variables: {
+					restaurant: results[0].name, 
+					restaurantImage: results[0].image,
+					date: dateString,
+					link: results[0].link 
+				}
 			})
 			setQuizResults(results);
 			console.log(results);

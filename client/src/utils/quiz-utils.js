@@ -67,6 +67,7 @@ const restaurants = [
   {
     name: "Costco",
     image: '../../public/costco.jpg',
+    link: 'https://www.costco.com/',
     dogTypes: ["Hotdog"],
     toppings: ["Standard Condiments", "Plain"],
     sizes: ["Large"],
@@ -74,6 +75,7 @@ const restaurants = [
   {
     name: "Sonic",
     image: "../../public/sonic-drive-in.jpg",
+    link: 'https://www.sonicdrivein.com/',
     dogTypes: ["Hotdog", "Corndog"],
     toppings: ["Chilli/Cheese"],
     sizes: ["Large"],
@@ -81,6 +83,7 @@ const restaurants = [
   {
     name: "Five Guys",
     image: "../../public/Five-Guys-Logo.jpg",
+    link: 'https://www.fiveguys.com/',
     dogTypes: ["Hotdog"],
     toppings: ["Standard", "Plain"],
     sizes: ["Medium"],
@@ -88,6 +91,7 @@ const restaurants = [
   {
     name: "Krystal",
     image: "../../public/Krystal_Restaurants_Logo.jpg",
+    link: 'https://www.krystal.com/menu/',
     dogTypes: ["Hotdog", "Corndog"],
     toppings: ["Chilli/Cheese", "Plain"],
     sizes: ["Small"],
@@ -95,6 +99,7 @@ const restaurants = [
   {
     name: "Cookout",
     image: "../../public/CookOut-Sign.png",
+    link: 'https://cookout.com/',
     dogTypes: ["Hotdog", "Corndog"],
     toppings: ["Chilli/cheese", "Standard", "Plain", "Mexican"],
     sizes: ["Medium"],
