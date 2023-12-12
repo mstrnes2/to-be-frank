@@ -21,6 +21,7 @@ export default function QuestionOne() {
     })
     console.log(data);
     Auth.logout();
+    alert("Why are you even on this website? YEET!")
     document.location.replace('/');
   };
 
