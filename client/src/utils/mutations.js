@@ -53,15 +53,11 @@ export const DELETE_USER = gql`
 
 export const UPDATE_QUIZ_RESULTS = gql`
   mutation updateQuizResults(
-    $id: ID!
     $restaurant: String
-    $date: String
     $restaurantImage: String
   ) {
     updateQuizResults(
-      id: $id
       restaurant: $restaurant
-      date: $date
       restaurantImage: $restaurantImage
     ) {
       _id
