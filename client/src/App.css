@@ -87,7 +87,7 @@ body {
 .yes-button,
 .no-button,
 .yes-no-buttons,
-/* .username-logout-buttons, */
+.username-logout-buttons,
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .selectionandnext,
@@ -205,6 +205,7 @@ body {
 .next-button {
 	font-size: 24px;
 }
+
 /* 
 .next-button {
 	margin-left: 10px;
@@ -233,13 +234,12 @@ body {
 }
 
 .username-logout-buttons {
-	position: absolute;
+	position: fixed;
+	left: 0;
+	right: 0;
 	top: 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center; 	
+	flex-direction: row;	
 	/* margin-left: 17%; */
-	
 }
 
 .username-button {
@@ -389,6 +389,7 @@ body {
 	.username-logout-buttons {
 		margin-left: 5%;
 	}
+
 	.quizComponent, .quiz-completed {
 		padding-top: 100px;
 		display: flex;
