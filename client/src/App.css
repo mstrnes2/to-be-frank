@@ -73,6 +73,23 @@ body {
 	right: 0;
 }
 
+@media screen and (max-width: 768px) {
+	.background-container {
+		background-image: url(/iStock-996519874.jpg);
+		/* filter: brightness(75%); */
+	}
+	.logo {
+		margin-top: 200px;
+		filter: brightness(120%);
+	}
+	.signuploginheader {
+		margin-right: 20%;
+		margin-top: 80px;
+		color:#93bbc3;
+		filter: brightness(110%);
+	}
+}
+
 .background-container,
 .login-background,
 .signup-login-container,
