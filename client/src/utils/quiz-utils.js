@@ -36,6 +36,10 @@ export function chooseRestaurants(answers) {
 
   for (let i = 0; i < restaurants.length; i++) {
     console.log("Size:", answers.size, "Restaurant Sizes:", restaurants[i].sizes);
+    console.log(restaurants[i].name);
+    console.log(restaurants[i].dogTypes.includes(answers.dogType));
+    console.log(restaurants[i].sizes.includes(answers.size));
+    console.log(restaurants[i].toppings.includes(answers.topping))
     if (
       restaurants[i].dogTypes.includes(answers.dogType) &&
       restaurants[i].sizes.includes(answers.size) &&
@@ -48,9 +52,11 @@ export function chooseRestaurants(answers) {
     }
   }
   if (results.length === 0) {
+    console.log("hit")
     const defaultRestaurant = {
       name: "Cookout",
-      image: "../../public/CookOut-Sign.png",
+      image: "/CookOut-Sign.png",
+      link: 'https://cookout.com/',
       dogTypes: ["Hotdog", "Corndog"],
       toppings: ["Chilli/cheese", "Standard", "Plain", "Mexican"],
       sizes: ["Medium"],
@@ -66,7 +72,7 @@ export function chooseRestaurants(answers) {
 const restaurants = [
   {
     name: "Costco",
-    image: '../../public/costco.jpg',
+    image: '/costco.jpg',
     link: 'https://www.costco.com/',
     dogTypes: ["Hotdog"],
     toppings: ["Standard Condiments", "Plain"],
@@ -74,7 +80,7 @@ const restaurants = [
   },
   {
     name: "Sonic",
-    image: "../../public/sonic-drive-in.jpg",
+    image: "/sonic-drive-in.jpg",
     link: 'https://www.sonicdrivein.com/',
     dogTypes: ["Hotdog", "Corndog"],
     toppings: ["Chilli/Cheese"],
@@ -82,23 +88,23 @@ const restaurants = [
   },
   {
     name: "Five Guys",
-    image: "../../public/Five-Guys-Logo.jpg",
+    image: "/Five-Guys-Logo.jpg",
     link: 'https://www.fiveguys.com/',
     dogTypes: ["Hotdog"],
-    toppings: ["Standard", "Plain"],
+    toppings: ["Standard Condiments", "Plain"],
     sizes: ["Medium"],
   },
   {
     name: "Krystal",
-    image: "../../public/Krystal_Restaurants_Logo.jpg",
+    image: "/Krystal_Restaurants_Logo.jpg",
     link: 'https://www.krystal.com/menu/',
     dogTypes: ["Hotdog", "Corndog"],
-    toppings: ["Chilli/Cheese", "Plain"],
+    toppings: ["Chilli/Cheese", "Plain", "Standard Condiments"],
     sizes: ["Small"],
   },
   {
     name: "Cookout",
-    image: "../../public/CookOut-Sign.png",
+    image: "/CookOut-Sign.png",
     link: 'https://cookout.com/',
     dogTypes: ["Hotdog", "Corndog"],
     toppings: ["Chilli/cheese", "Standard", "Plain", "Mexican"],

@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import formatDate from '../utils/dateFormat';
+import dayjs from 'dayjs';
 
 
 
 export default function Results({ me }) {
-
-    const dateFromDatabase = new Date(me.profile.quizResults.date);
-    const formattedDate = formatDate(dateFromDatabase);
-
+    console.log('me:', me)
+    const {quizResults} = me.profile
+    console.log(quizResults.date)
     return(
         <div>
-            <h2>{formattedDate}</h2>
+            <h2>{dayjs.unix(quizResults.date / 1000).format('MM/DD/YYYY h:mm A')}</h2>
+            <h3>{quizResults.restaurant}</h3>
             <figure>
-            <a href={me.profile.quizResults.link}>
-            <img src={me.profile.quizResults.restaurantImage} alt={me.profile.quizResults.restaurant} className="resultImage"/>
+            <a href={quizResults.link}>
+            <img src={quizResults.restaurantImage} alt={quizResults.restaurant} className="resultImage"/>
             </a>
             </figure>
         </div>

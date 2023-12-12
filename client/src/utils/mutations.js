@@ -58,11 +58,13 @@ export const UPDATE_QUIZ_RESULTS = gql`
     $restaurant: String
     $restaurantImage: String
     $date: String
+    $link: String
   ) {
     updateQuizResults(
       restaurant: $restaurant
       restaurantImage: $restaurantImage
       date: $date
+      link: $link
     ) {
       _id
       username

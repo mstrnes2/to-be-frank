@@ -28,7 +28,7 @@ function Profile() {
                 Logout
               </button>
             </div>
-            <h1 className='username'>username</h1>
+            <h1 className='username'>{Auth.getProfile().data.username}</h1>
             <div>
               <Results me={me} />
             </div>

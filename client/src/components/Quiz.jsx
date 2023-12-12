@@ -16,11 +16,11 @@ const QuizComponent = () => {
 	const questions = [
 		{
 			question: 'Corn dog or hotdog?',
-			options: ['Corn dog', 'Hotdog'],
+			options: ['Corndog', 'Hotdog'],
 		},
 		{
 			question: 'What toppings do you prefer?',
-			options: ['Chili/Cheese', 'Standard Condiments', 'Mexican', 'Plain'],
+			options: ['Chilli/Cheese', 'Standard Condiments', 'Mexican', 'Plain'],
 		},
 		{
 			question: 'What size are you looking for?',
@@ -55,15 +55,17 @@ const QuizComponent = () => {
 		try {
 		// Log or handle the results as needed.
 			const currentDate = new Date();
-			const dateString = currentDate.toISOString();
+			console.log(currentDate);
+			// const dateString = currentDate.toISOString();
 			const { data } = await updateQuizResults({
 				variables: {
 					restaurant: results[0].name, 
 					restaurantImage: results[0].image,
-					date: dateString,
+					date: currentDate,
 					link: results[0].link 
 				}
 			})
+			console.log(data);
 			setQuizResults(results);
 			console.log(results);
 
