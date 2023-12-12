@@ -9,7 +9,7 @@ const QuizComponent = () => {
 
 	const questions = [
 		{
-			question: 'Do you want a corn dog or a hotdog?',
+			question: 'Corn dog or hotdog?',
 			options: ['Corn dog', 'Hotdog'],
 		},
 		{
@@ -17,7 +17,7 @@ const QuizComponent = () => {
 			options: ['Chili/Cheese', 'Standard Condiments', 'Mexican', 'Plain'],
 		},
 		{
-			question: 'What size dog are you looking for?',
+			question: 'What size are you looking for?',
 			options: ['Small', 'Medium', 'Large'],
 		},
 	];

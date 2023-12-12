@@ -167,7 +167,6 @@ body {
 .logout-button,
 .yes-button,
 .no-button,
-.next-button,
 .submitanswers-button {
 	outline: none;
 	cursor: pointer;
@@ -181,37 +180,27 @@ body {
 	line-height: 1.15;
 	max-width: 50%;
 	white-space: nowrap;
+	text-align: center;
 }
 
 
 .yes-button,
 .no-button,
-.next-button,
 .submitanswers-button {
 	color: var(--buttons-text-color);
-	background: linear-gradient(
-		45deg,
-		var(--ketchup),
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			var(--ketchup),
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
 }
 
 .yes-button,
-.no-button,
-.next-button {
+.no-button {
 	font-size: 24px;
 }
-
-/* 
-.next-button {
-	margin-left: 10px;
-	height: 55px;
-	width: 150px;
-} */
 
 .submitanswers-button {
 	margin-top: -50px;
@@ -238,24 +227,40 @@ body {
 	left: 0;
 	right: 0;
 	top: 20px;
-	flex-direction: row;	
-	/* margin-left: 17%; */
+	flex-direction: row;
 }
 
 .username-button {
 	margin-right: 10px;
 	text-decoration: none;
-	color: var(--mustard);
+	/* color: var(--mustard); */
 	font-family: var(--default-font);
 	font-size: 28px;
+	background: linear-gradient(45deg,
+	#df9400,
+	#e5a933,
+	#ecbf66,
+	#f2d499,
+	#f9eacc);
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .logout-button {
 	font-size: 18px;
 	margin-left: 10px;
-	background-color: #cc2522;
-	text-align: center;
-	
+	background: linear-gradient(45deg,
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc,
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup));
 }
 
 .yes-button {
@@ -270,25 +275,24 @@ body {
 
 .yes-no-buttons {
 	flex-direction: row;
-	margin-top: 25px;
+	margin-top: 40px;
 }
 
 .questionOne,
 .quizComponent,
 .quiz-completed {
+	text-align: center;
 	font-family: var(--most-used-font);
-	font-size: 4rem;
-	background: linear-gradient(
-		45deg,
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc,
-		var(--ketchup),
-		var(--ketchup),
-		var(--ketchup)
-	);
+	font-size: 5rem;
+	background: linear-gradient(45deg,
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc,
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup));
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -297,10 +301,9 @@ body {
 	margin-top: -100px;
 }
 
-.quizComponent  {
+.quizComponent {
 	margin-top: -150px;
 	max-width: 50%;
-	font-size: 4rem;
 }
 
 .selectionandnext {
@@ -321,21 +324,18 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	color: var(--buttons-text-color);
-	background: linear-gradient(
-		45deg,
-		var(--ketchup),
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			var(--ketchup),
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
 }
 
 .quiz-completed {
 	flex-direction: column;
 	font-size: 4rem;
-	
 }
 
 .see-this-message {
@@ -345,36 +345,59 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.questionOneAndButtons {
-		margin-top: 75px;
-		margin-left: 15px;
+
+	.questionOneAndButtons,
+	.quizComponent,
+	.quiz-completed,
+	.submitanswers-button,
+	.see-this-message {
+		/* margin-top: 75px;
+		margin-left: 15px; */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 	}
 
 	.questionOne,
-	.quizComponent,
+	.quizComponent {
+		font-size: 3rem;
+		max-width: 75%;
+	}
+
+	.selection,
+	.options,
+	.submitanswers-button {
+		font-size: 1.5rem;
+	}
+
 	.quiz-completed {
-		font-size: 2.5rem;
-		max-width: 80%;
+		font-size: 2.75rem;
 	}
 
-	.yes-button, .no-button {
-		width: 50px;
-		height: 50px;
-		margin: 0 15px; 
+	.see-this-message {
+		font-size: 2rem;
 	}
 
-	.signup-login-container {
-		flex-direction: column; /* Stack containers vertically */
-		align-items: center; /* Center containers horizontally */
+	.yes-button,
+	.no-button {
+		width: 100px;
+		height: 35px;
+	}
+
+	.yes-button {
+		margin-right: 5px;
+	}
+
+	.no-button {
+		margin-left: 5px;
 	}
 
 	.signupForm-container,
 	.loginForm-container {
-		margin: 10px 0; /* Add some space between the stacked containers */
+		margin: 10px 0;
+		/* Add some space between the stacked containers */
 		max-width: fit-content;
 		max-height: fit-content;
 	}
@@ -386,18 +409,19 @@ body {
 		padding: 7px 8px;
 	}
 
-	.username-logout-buttons {
+	/* .username-logout-buttons {
 		margin-left: 5%;
-	}
+	} */
 
-	.quizComponent, .quiz-completed {
+	/* .quizComponent,
+	.quiz-completed {
 		padding-top: 100px;
-		display: flex;
-		flex-direction: column;
 		align-items: flex-start;
-		
-		
-		/* max-width: 70%; */
+		max-width: 70%;
+	} */
+
+	.selection {
+		margin-top: 10px;
 	}
 
 	.selection,
@@ -408,6 +432,20 @@ body {
 
 	.submitanswers-button {
 		margin-top: 0.1%;
-		margin-left: 25%;
+	}
+}
+
+@media screen and (max-width: 492px) {
+
+	.signup-login-container,
+	.signuploginheader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.signuploginheader {
+		margin-top: 175px;
 	}
 }
