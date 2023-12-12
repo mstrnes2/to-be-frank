@@ -5,6 +5,7 @@ import { GET_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const logout = (event) => {
+
   event.preventDefault();
   Auth.logout();
   window.location.assign('/LoginPage');
@@ -37,6 +38,7 @@ function Profile() {
       )}
     </div>
   );
-}
+
+};
 
 export default Profile;
