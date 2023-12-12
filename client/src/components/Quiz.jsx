@@ -1,11 +1,14 @@
 // QuizComponent.js
 import React, { useState } from 'react';
 import { chooseRestaurants } from '../utils/quiz-utils';
+import { UPDATE_QUIZ_RESULTS } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const QuizComponent = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [answers, setAnswers] = useState(Array(3).fill(''));
 	const [quizResults, setQuizResults] = useState(null);
+	const [updateQuizResults, { loading, error }] = useMutation(UPDATE_QUIZ_RESULTS);
 
 	const questions = [
 		{
@@ -34,20 +37,31 @@ const QuizComponent = () => {
 		setCurrentQuestion((prevQuestion) => prevQuestion + 1);
 	};
 
-	const handleSubmit = () => {
+	const handleSubmit = async () => {
 		// Create an object with the answers from the state
 		const userAnswers = {
 			dogType: answers[0], // Assuming answers[0] is the dogType
 			topping: answers[1], // Assuming answers[1] is the topping
 			size: answers[2], // Assuming answers[2] is the size
 		};
-
+		
 		// Call chooseRestaurants function with userAnswers as the argument
 		const results = chooseRestaurants(userAnswers);
-
-		// Log or handle the results as needed
-		setQuizResults(results);
 		console.log(results);
+		console.log(results[0].name, results[0].image);
+		try {
+		// Log or handle the results as needed
+			const { data } = await updateQuizResults({
+				variables: {restaurant: results[0].name, restaurantImage: results[0].image}
+			})
+			setQuizResults(results);
+			console.log(results);
+
+
+			window.location.replace('/Profile');
+		} catch (err) {
+			console.log(error);
+		}
 	};
 
 	return (
