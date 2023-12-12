@@ -1,12 +1,12 @@
 const typeDefs = `
-  type ProfileQuizResults {
+  type updateQuizResults {
     restaurant: String
     date: String
     restrauntImage: String
   }
 
   type Profile {
-    quizResults: ProfileQuizResults
+    quizResults: updateQuizResults
   }
 
   type User {
