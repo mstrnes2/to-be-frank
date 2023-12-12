@@ -393,8 +393,8 @@ body {
 
 .username {
 	position: absolute;
-	top: 50px;
-	justify-content: center;
+	top: 10px;
+	left: 37%;
 }
 
 @media screen and (max-width: 768px) {
