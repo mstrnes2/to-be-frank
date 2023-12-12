@@ -17,6 +17,7 @@
     "concurrently": "^8.2.0"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "react-transition-group": "^4.4.5"
   }
 }

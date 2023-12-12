@@ -11,6 +11,7 @@ export const GET_USERS = gql`
           restaurant
           date
           restaurantImage
+          link
         }
       }
     }
@@ -28,6 +29,7 @@ export const QUERY_USER = gql`
           restaurant
           date
           restaurantImage
+          link
         }
       }
     }
@@ -45,6 +47,7 @@ export const GET_ME = gql`
           restaurant
           date
           restaurantImage
+          link
         }
       }
     }
