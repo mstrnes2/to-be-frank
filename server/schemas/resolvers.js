@@ -93,9 +93,10 @@ const resolvers = {
       throw AuthenticationError;
     },
 
-    updateQuizResults: async (parent, { id, quizResults }) => {
+    updateQuizResults: async (parent, { quizResults }, context) => {
       try {
-        const user = await User.findById(id);
+        if(context.user) {
+        const user = await User.findById(context.user._id);
 
         if (!user) {
           throw new Error("User not found");
@@ -106,6 +107,9 @@ const resolvers = {
         await user.save();
 
         return user;
+      } else {
+        throw AuthenticationError;
+      }
       } catch (error) {
         console.error(error);
         throw new Error("Failed to update the quiz results");
