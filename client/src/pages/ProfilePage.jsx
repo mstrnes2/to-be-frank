@@ -1,5 +1,6 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import Header from '../components/Header';
 import Results from '../components/Results';
 import Auth from '../utils/auth';
 
@@ -11,19 +12,12 @@ const logout = (event) => {
 
 function Profile() {
 	return (
-		<div>
-			<div className='profile-container'>
-				<div>
-					<h1 className='username'>username</h1>
-					<button
-						className='logout-button profile-logout'
-						onClick={logout}>
-						Logout
-					</button>
-				</div>
-				<div>
-					<Results />
-				</div>
+		<div className='quizHeaderAndQuestions'>
+			<div className='quizHeader'>
+				<Header />
+			</div>
+			<div className='quizComponent'>
+				<Results />
 			</div>
 		</div>
 	);
