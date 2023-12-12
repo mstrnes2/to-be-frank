@@ -47,6 +47,17 @@ export function chooseRestaurants(answers) {
       console.log('No matches for this restaurant!');
     }
   }
+  if (results.length === 0) {
+    const defaultRestaurant = {
+      name: "Cookout",
+      image: "../../public/CookOut-Sign.png",
+      dogTypes: ["Hotdog", "Corndog"],
+      toppings: ["Chilli/cheese", "Standard", "Plain", "Mexican"],
+      sizes: ["Medium"],
+    };
+    results.push(defaultRestaurant);
+  }
+
   return results;
 }
 
