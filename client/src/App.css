@@ -26,7 +26,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
+.profile-container,
 .background-container,
 .login-background,
 .questionOneAndHeader,
@@ -42,6 +42,7 @@ body {
 	background-image: url(/WeinerDog.jpg);
 }
 
+.profile-container,
 .login-background,
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
@@ -85,11 +86,12 @@ body {
 	.signuploginheader {
 		margin-right: 20%;
 		margin-top: 80px;
-		color:#93bbc3;
+		color: #93bbc3;
 		filter: brightness(125%);
 	}
 }
 
+.profile-container,
 .background-container,
 .login-background,
 .signup-login-container,
@@ -200,18 +202,19 @@ body {
 	text-align: center;
 }
 
-
 .yes-button,
 .no-button,
 .submitanswers-button {
 	color: var(--buttons-text-color);
-	background: linear-gradient(45deg,
-			var(--ketchup),
-			#df9400,
-			#e5a933,
-			#ecbf66,
-			#f2d499,
-			#f9eacc);
+	background: linear-gradient(
+		45deg,
+		var(--ketchup),
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
 }
 
 .yes-button,
@@ -246,19 +249,36 @@ body {
 	top: 20px;
 	flex-direction: row;
 }
-
+.username {
+	text-decoration: none;
+	font-family: var(--default-font);
+	font-size: 28px;
+	background: linear-gradient(
+		45deg,
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
+	-webkit-background-clip: text;
+	color: transparent;
+	padding-left: 3%;
+}
 .username-button {
 	margin-right: 10px;
 	text-decoration: none;
 	/* color: var(--mustard); */
 	font-family: var(--default-font);
 	font-size: 28px;
-	background: linear-gradient(45deg,
-			#df9400,
-			#e5a933,
-			#ecbf66,
-			#f2d499,
-			#f9eacc);
+	background: linear-gradient(
+		45deg,
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -266,12 +286,14 @@ body {
 .logout-button {
 	font-size: 18px;
 	margin-left: 10px;
-	background: linear-gradient(45deg,
-			#df9400,
-			#e5a933,
-			#ecbf66,
-			#f2d499,
-			#f9eacc);
+	background: linear-gradient(
+		45deg,
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
 }
 
 .yes-button {
@@ -295,15 +317,17 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	font-size: 5rem;
-	background: linear-gradient(45deg,
-			#df9400,
-			#e5a933,
-			#ecbf66,
-			#f2d499,
-			#f9eacc,
-			var(--ketchup),
-			var(--ketchup),
-			var(--ketchup));
+	background: linear-gradient(
+		45deg,
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc,
+		var(--ketchup),
+		var(--ketchup),
+		var(--ketchup)
+	);
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -335,13 +359,15 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	color: var(--buttons-text-color);
-	background: linear-gradient(45deg,
-			var(--ketchup),
-			#df9400,
-			#e5a933,
-			#ecbf66,
-			#f2d499,
-			#f9eacc);
+	background: linear-gradient(
+		45deg,
+		var(--ketchup),
+		#df9400,
+		#e5a933,
+		#ecbf66,
+		#f2d499,
+		#f9eacc
+	);
 }
 
 .quiz-completed {
@@ -355,8 +381,23 @@ body {
 	color: var(--default-color);
 }
 
-@media screen and (max-width: 768px) {
+.profile-container {
+	position: relative;
+}
 
+.profile-logout {
+	position: absolute;
+	top: 10px;
+	justify-content: center;
+}
+
+.username {
+	position: absolute;
+	top: 10px;
+	left: 37%;
+}
+
+@media screen and (max-width: 768px) {
 	.questionOneAndButtons,
 	.quizComponent,
 	.quiz-completed,
@@ -420,17 +461,6 @@ body {
 		padding: 7px 8px;
 	}
 
-	/* .username-logout-buttons {
-		margin-left: 5%;
-	} */
-
-	/* .quizComponent,
-	.quiz-completed {
-		padding-top: 100px;
-		align-items: flex-start;
-		max-width: 70%;
-	} */
-
 	.selection {
 		margin-top: 10px;
 	}
@@ -444,10 +474,13 @@ body {
 	.submitanswers-button {
 		margin-top: 0.1%;
 	}
+
+	.username {
+		padding-left: 8%;
+	}
 }
 
 @media screen and (max-width: 492px) {
-
 	.signup-login-container,
 	.signuploginheader {
 		display: flex;
@@ -455,5 +488,4 @@ body {
 		align-items: center;
 		flex-direction: column;
 	}
-
 }

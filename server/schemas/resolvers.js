@@ -93,7 +93,7 @@ const resolvers = {
       throw AuthenticationError;
     },
 
-    updateQuizResults: async (parent, { quizResults }, context) => {
+    updateQuizResults: async (parent, { restaurant, restaurantImage, date, link }, context) => {
       try {
         if(context.user) {
         const user = await User.findById(context.user._id);
@@ -101,9 +101,11 @@ const resolvers = {
         if (!user) {
           throw new Error("User not found");
         }
-
-        user.profile.quizResults = quizResults;
-
+        user.profile.quizResults.restaurant = restaurant;
+        user.profile.quizResults.restaurantImage = restaurantImage;
+        user.profile.quizResults.date = date;
+        user.profile.quizResults.link = link;
+        
         await user.save();
 
         return user;

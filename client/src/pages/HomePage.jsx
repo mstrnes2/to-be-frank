@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { QUERY_ME } from "../utils/queries";
+// import { QUERY_ME } from "../utils/queries";
 
 function Home() {
   // TODO: If the user is logged in...

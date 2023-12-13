@@ -1,18 +1,8 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
-export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
-      _id
-      username
-      email
-    }
-  }
-`;
-
-export const QUERY_USERS = gql`
-  query getUsers {
-    Users {
+export const GET_USERS = gql`
+  query {
+    users {
       _id
       username
       email
@@ -20,36 +10,48 @@ export const QUERY_USERS = gql`
         quizResults {
           restaurant
           date
-          restuarantImage
+          restaurantImage
+          link
         }
       }
     }
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+export const QUERY_USER = gql`
+  query getUser($username: String!) {
+    user(username: $username) {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
+      username
+      email
+      profile {
+        quizResults {
+          restaurant
+          date
+          restaurantImage
+          link
+        }
       }
     }
   }
 `;
 
-export const QUERY_ME = gql`
-  query me {
+export const GET_ME = gql`
+  query {
     me {
       _id
       username
       email
+      profile {
+        quizResults {
+          restaurant
+          date
+          restaurantImage
+          link
+        }
+      }
     }
   }
 `;
+
+
