@@ -7,6 +7,7 @@ export default function Results({ me }) {
     console.log('me:', me)
     const { quizResults } = me.profile
     console.log(quizResults.date)
+    
     return (
         <div className='clickhere-resultscontainer'>
             <div className='clickhere'>
