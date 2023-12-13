@@ -1,17 +1,27 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
+import { useMutation } from "@apollo/client";
+import { DELETE_USER } from '../utils/mutations';
 
 export default function QuestionOne() {
   const navigate = useNavigate();
+  const [deleteUser] = useMutation(DELETE_USER);
 
   const handleYesClick = () => {
     navigate("/QuizPage");
   };
 
-  const handleNoClick = () => {
-    Auth.removeUserData();
+  const handleNoClick = async () => {
     console.log("User data yeeted because they don't like hotdogs");
+    const {data} = await deleteUser ({
+      variables: {
+        id: Auth.getProfile().data._id
+      }
+    })
+    console.log(data);
+    Auth.logout();
+    document.location.replace('/');
   };
 
   return (
@@ -21,7 +31,7 @@ export default function QuestionOne() {
         <button className="yes-button" onClick={handleYesClick}>
           Yes
         </button>
-        <button className="no-button">No</button>
+        <button className="no-button" onClick={handleNoClick}>No</button>
       </div>
     </div>
   );

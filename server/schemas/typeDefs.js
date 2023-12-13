@@ -3,6 +3,7 @@ const typeDefs = `
     restaurant: String
     date: String
     restaurantImage: String
+    link: String
   }
 
   type Profile {
@@ -32,7 +33,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     deleteUser(id: ID!): User
-    updateQuizResults(restaurant: String, date: String, restaurantImage: String): User
+    updateQuizResults(restaurant: String, date: String, restaurantImage: String, link: String): User
   }
 `;
 
