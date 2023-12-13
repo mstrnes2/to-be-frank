@@ -97,7 +97,8 @@ body {
 .quiz-completed,
 .see-this-message,
 .clickhere-resultscontainer,
-.results-container {
+.results-container,
+.retake {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -172,7 +173,8 @@ body {
 .logout-button,
 .yes-button,
 .no-button,
-.submitanswers-button {
+.submitanswers-button,
+.retake {
 	outline: none;
 	cursor: pointer;
 	font-weight: 600;
@@ -183,7 +185,7 @@ body {
 	background: var(--buttons-background-color);
 	font-family: var(--most-used-font);
 	line-height: 1.15;
-	max-width: 50%;
+	/* max-width: 50%; */
 	white-space: nowrap;
 	text-align: center;
 }
@@ -203,6 +205,11 @@ body {
 .yes-button,
 .no-button {
 	font-size: 24px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
 }
 
 .submitanswers-button {
@@ -265,7 +272,8 @@ body {
 	color: transparent;
 }
 
-.logout-button {
+.logout-button,
+.retake {
 	font-size: 18px;
 	margin-left: 10px;
 	background: linear-gradient(45deg,
