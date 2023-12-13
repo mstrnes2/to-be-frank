@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Results from '../components/Results';
 import { GET_ME } from '../utils/queries';
 import Auth from '../utils/auth';
+import Footer from '../components/Footer';
 
 const logout = (event) => {
 
@@ -31,6 +32,9 @@ function Profile() {
               <Results me={me} />
             </div>
           </div>
+          <div className='footer'>
+            <Footer />
+            </div>
         </div>
       )}
     </div>
