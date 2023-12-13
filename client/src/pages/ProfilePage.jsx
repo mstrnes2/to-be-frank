@@ -1,5 +1,6 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import Header from '../components/Header';
 import Results from '../components/Results';
 import { GET_ME } from '../utils/queries';
 import Auth from '../utils/auth';
@@ -12,6 +13,7 @@ const logout = (event) => {
 };
 
 function Profile() {
+
   const { loading, data } = useQuery(GET_ME);
   const me = data?.me || [];
 
@@ -20,16 +22,11 @@ function Profile() {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div>
-          <div className='profile-container'>
-            <div>
-              <button
-                className='logout-button profile-logout'
-                onClick={logout}>
-                Logout
-              </button>
-            </div>
-            <h1 className='username'>{Auth.getProfile().data.username}</h1>
+       <div className='quizHeaderAndQuestions'>
+			  <div className='quizHeader'>
+				  <Header />
+			  </div>
+			  <div className='quizComponent'>
             <div>
               <Results me={me} />
             </div>
