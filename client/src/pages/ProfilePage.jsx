@@ -27,7 +27,7 @@ function Profile() {
 			  <div className='quizHeader'>
 				  <Header />
 			  </div>
-			  <div className='quizComponent'>
+			  <div className='resultsComponent'>
             <div>
               <Results me={me} />
             </div>
