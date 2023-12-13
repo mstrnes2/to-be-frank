@@ -48,7 +48,7 @@ body {
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .see-this-message {
-	background-image: url(https://www.tastingtable.com/img/gallery/13-best-hot-dogs-in-america/intro-1660217636.jpg);
+	background-image: url(iStock-996519874.jpg);
 }
 
 .logo {
@@ -429,7 +429,7 @@ body {
 	width: 300px;
 	height: 150px;
 }
-
+/* 
 @media screen and (min-width: 1200px) {
 
 	.background-container,
@@ -444,7 +444,7 @@ body {
 	.quizComponent {
 		max-width: 50%;
 	}
-}
+} */
 
 @media screen and (max-width: 800px) {
 
