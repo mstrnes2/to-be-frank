@@ -26,6 +26,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 .profile-container,
 .background-container,
 .login-background,
@@ -47,7 +48,7 @@ body {
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .see-this-message {
-	background-image: url(/iStock-996519874.jpg);
+	background-image: url(https://www.tastingtable.com/img/gallery/13-best-hot-dogs-in-america/intro-1660217636.jpg);
 }
 
 .logo {
@@ -74,23 +75,6 @@ body {
 	right: 0;
 }
 
-@media screen and (max-width: 768px) {
-	.background-container {
-		background-image: url(/iStock-996519874.jpg);
-		/* filter: brightness(75%); */
-	}
-	.logo {
-		margin-top: 200px;
-		filter: brightness(120%);
-	}
-	.signuploginheader {
-		margin-right: 20%;
-		margin-top: 80px;
-		color: #93bbc3;
-		filter: brightness(125%);
-	}
-}
-
 .profile-container,
 .background-container,
 .login-background,
@@ -111,7 +95,9 @@ body {
 .quizHeaderAndQuestions,
 .selectionandnext,
 .quiz-completed,
-.see-this-message {
+.see-this-message,
+.clickhere-resultscontainer,
+.results-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -206,15 +192,12 @@ body {
 .no-button,
 .submitanswers-button {
 	color: var(--buttons-text-color);
-	background: linear-gradient(
-		45deg,
-		var(--ketchup),
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			#f9eacc,
+			#f2d499,
+			#ecbf66,
+			#e5a933,
+			#df9400);
 }
 
 .yes-button,
@@ -249,36 +232,34 @@ body {
 	top: 20px;
 	flex-direction: row;
 }
+
 .username {
 	text-decoration: none;
 	font-family: var(--default-font);
 	font-size: 28px;
-	background: linear-gradient(
-		45deg,
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
 	-webkit-background-clip: text;
 	color: transparent;
 	padding-left: 3%;
 }
+
 .username-button {
 	margin-right: 10px;
 	text-decoration: none;
 	/* color: var(--mustard); */
 	font-family: var(--default-font);
 	font-size: 28px;
-	background: linear-gradient(
-		45deg,
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -286,14 +267,12 @@ body {
 .logout-button {
 	font-size: 18px;
 	margin-left: 10px;
-	background: linear-gradient(
-		45deg,
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
 }
 
 .yes-button {
@@ -317,17 +296,18 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	font-size: 5rem;
-	background: linear-gradient(
-		45deg,
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc,
-		var(--ketchup),
-		var(--ketchup),
-		var(--ketchup)
-	);
+	background: linear-gradient(45deg,
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			#f9eacc,
+			#f2d499,
+			#ecbf66,
+			#e5a933,
+			#df9400
+		);
 	-webkit-background-clip: text;
 	color: transparent;
 }
@@ -338,7 +318,7 @@ body {
 
 .quizComponent {
 	margin-top: -150px;
-	max-width: 50%;
+	max-width: 63%;
 }
 
 .selectionandnext {
@@ -359,15 +339,14 @@ body {
 	text-align: center;
 	font-family: var(--most-used-font);
 	color: var(--buttons-text-color);
-	background: linear-gradient(
-		45deg,
-		var(--ketchup),
-		#df9400,
-		#e5a933,
-		#ecbf66,
-		#f2d499,
-		#f9eacc
-	);
+	background: linear-gradient(45deg,
+			var(--ketchup),
+			#f9eacc,
+			#f2d499,
+			#ecbf66,
+			#e5a933,
+			#df9400,
+			var(--ketchup));
 }
 
 .quiz-completed {
@@ -397,7 +376,101 @@ body {
 	left: 37%;
 }
 
-@media screen and (max-width: 768px) {
+.clickhere-resultscontainer {
+	flex-direction: column;
+}
+
+.clickhere {
+	font-size: 4rem;
+	width: 125%;
+	margin-bottom: 25px;
+	background: linear-gradient(45deg,
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			var(--ketchup),
+			#f9eacc,
+			#f2d499,
+			#ecbf66,
+			#e5a933,
+			#df9400);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.results-container {
+	flex-direction: column;
+	border-radius: 0.9rem;
+	padding: 5rem;
+	width: 400px;
+	height: 250px;
+	background: linear-gradient(45deg,
+			#df9400,
+			#e5a933,
+			#ecbf66,
+			#f2d499,
+			#f9eacc);
+}
+
+.result-date-and-restaurant-name {
+	margin-top: 100px;
+	font-size: 2.75rem;
+	color: var(--ketchup);
+}
+
+.restaurant-name {
+	margin-top: 25px;
+}
+
+.restaurant-image {
+	margin-top: -50px;
+	width: 300px;
+	height: 150px;
+}
+
+@media screen and (min-width: 1200px) {
+
+	.background-container,
+	.profile-container,
+	.login-background,
+	.questionOneAndHeader,
+	.quizHeaderAndQuestions,
+	.see-this-message {
+		background-image: url(/iStock-996519874.jpg);
+	}
+
+	.quizComponent {
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.background-container,
+	.profile-container,
+	.login-background,
+	.questionOneAndHeader,
+	.quizHeaderAndQuestions,
+	.see-this-message {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(https://hips.hearstapps.com/hmg-prod/images/korean-corn-dogs-5-1666842213.jpg);
+	}
+
+	.logo {
+		margin-top: 200px;
+		filter: brightness(120%);
+	}
+
+	.signuploginheader {
+		margin-right: 20%;
+		margin-top: 80px;
+		color: #93bbc3;
+		filter: brightness(125%);
+	}
+
 	.questionOneAndButtons,
 	.quizComponent,
 	.quiz-completed,
@@ -414,8 +487,21 @@ body {
 
 	.questionOne,
 	.quizComponent {
-		font-size: 3rem;
+		font-size: 4rem;
 		max-width: 75%;
+		background: linear-gradient(45deg,
+				#f9eacc,
+				#f2d499,
+				#ecbf66,
+				#e5a933,
+				#df9400,
+				var(--ketchup),
+				var(--ketchup),
+				var(--ketchup),
+				var(--ketchup),
+				var(--ketchup));
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 
 	.selection,
@@ -467,8 +553,8 @@ body {
 
 	.selection,
 	.options {
-		max-height: 40px;
-		max-width: 200px;
+		max-height: 50px;
+		max-width: 250px;
 	}
 
 	.submitanswers-button {
@@ -478,14 +564,90 @@ body {
 	.username {
 		padding-left: 8%;
 	}
+
+	.clickhere {
+		font-size: 3rem;
+		background: linear-gradient(45deg,
+				#df9400,
+				#e5a933,
+				#ecbf66,
+				#f2d499,
+				#f9eacc,
+				#f2d499,
+				#ecbf66,
+				#e5a933,
+				#df9400,
+				var(--ketchup),
+				var(--ketchup),
+				var(--ketchup),
+				var(--ketchup),
+				var(--ketchup));
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+
+	.results-container {
+		padding: 5rem;
+		width: 225px;
+		height: 100px;
+	}
+
+	.result-date-and-restaurant-name {
+		margin-top: 150px;
+		font-size: 1.75rem;
+		width: 125%;
+		color: var(--ketchup);
+	}
+
+	.restaurant-name {
+		margin-bottom: 25px;
+	}
+
+	.restaurant-image {
+		/* margin-top: -50px; */
+		width: 225px;
+		height: 100px;
+		margin-bottom: 75px;
+	}
+
 }
 
-@media screen and (max-width: 492px) {
+@media screen and (max-width: 592px) {
+
+	/* .background-container {
+		background-image: url(/iStock-996519874.jpg);
+		filter: brightness(75%);
+	} */
+
 	.signup-login-container,
-	.signuploginheader {
+	.signuploginheader,
+	.results-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 	}
+
+	.clickhere {
+		font-size: 2.25rem;
+	}
+
+	.results-container {
+		padding: 5rem;
+		width: 150px;
+		height: 75px;
+	}
+
+	.result-date-and-restaurant-name {
+		margin-top: 125px;
+		font-size: 1.25rem;
+		width: 125%;
+		color: var(--ketchup);
+	}
+
+	.restaurant-image {
+		width: 150px;
+		height: 75px;
+	}
+
 }
