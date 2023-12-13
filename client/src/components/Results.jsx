@@ -5,17 +5,29 @@ import dayjs from 'dayjs';
 
 export default function Results({ me }) {
     console.log('me:', me)
-    const {quizResults} = me.profile
+    const { quizResults } = me.profile
     console.log(quizResults.date)
-    return(
-        <div>
-            <h2>{dayjs.unix(quizResults.date / 1000).format('MM/DD/YYYY h:mm A')}</h2>
-            <h3>{quizResults.restaurant}</h3>
-            <figure>
-            <a href={quizResults.link}>
-            <img src={quizResults.restaurantImage} alt={quizResults.restaurant} className="resultImage"/>
-            </a>
-            </figure>
+    return (
+        <div className='clickhere-resultscontainer'>
+            <div className='clickhere'>
+                Click here to order!
+            </div>
+            <div className='results-container'>
+                <div className='result-date-and-restaurant-name'>
+                    <div className='results-date'>
+                        {dayjs.unix(quizResults.date / 1000).format('MM/DD/YYYY h:mm A')}
+                    </div>
+                    <div className='restaurant-name'>
+                        {quizResults.restaurant}
+                    </div>
+                </div>
+                <figure>
+                    <a href={quizResults.link} title={quizResults.link}>
+                        <img src={quizResults.restaurantImage} alt={quizResults.restaurant} className='restaurant-image' />
+                    </a>
+                </figure>
+            </div>
         </div>
-    )
+    );
+
 }
