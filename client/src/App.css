@@ -215,6 +215,7 @@ body {
 	font-family: var(--default-font);
 	font-size: 20px;
 	margin-top: 25px;
+	text-align: center;
 }
 
 .signup-errormessage {
