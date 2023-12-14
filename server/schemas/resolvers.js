@@ -37,7 +37,7 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
-      try {
+      // try {
         if (password.length < 6) {
           throw new GraphQLError("Password must be 6+ characters.", {
             extensions: {
@@ -51,15 +51,15 @@ const resolvers = {
         const user = await User.create({ username, email, password });
         const token = signToken(user);
         return { token, user };
-      } catch (error) {
-        if (error instanceof GraphQLError) {
-          throw error;
-        }
+      // } catch (error) {
+      //   if (error instanceof GraphQLError) {
+      //     throw error;
+      //   }
 
-        // Catch-all generic message for unexpected errors
-        console.error(error);
-        throw new Error("Failed to create user.");
-      }
+      //   // Catch-all generic message for unexpected errors
+      //   console.error(error);
+      //   throw new Error("Failed to create user.");
+      // }
     },
     login: async (parent, { email, password }) => {
       try {
