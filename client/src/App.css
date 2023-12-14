@@ -48,7 +48,7 @@ body {
 .questionOneAndHeader,
 .quizHeaderAndQuestions,
 .see-this-message {
-	background-image: url(iStock-996519874.jpg);
+	background-image: url(/iStock-996519874.jpg);
 }
 
 .logo {
@@ -470,7 +470,7 @@ footer {
 		filter: brightness(125%);
 	}
 	.background-container {
-		background-image: url(iStock-996519874.jpg);
+		background-image: url(/iStock-996519874.jpg);
 	}
 	
 	.questionOneAndButtons,
