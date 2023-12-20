@@ -15,3 +15,4 @@ As far as security for this application, authentication is put in place through 
 ![Screenshot of application](./client/public/screenshot.jpeg?raw=true)
 
 ## Application Link
+[Live Link](https://to-be-frank-9e501319d50a.herokuapp.com/)
